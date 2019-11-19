@@ -1,5 +1,3 @@
-package PACKAGE_NAME;
-
 /**
  * Created by Tripptic on 11/19/2019.
  * Project: PromPTing

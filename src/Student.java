@@ -7,10 +7,12 @@
 This file was made by dylan
 */
 public class Student {
+
     private String Name;
     private String ID;
     private int groupId;
 
+    //students come from one CSV
     public Student(String n, String i, int g)
     {
       Name = n;

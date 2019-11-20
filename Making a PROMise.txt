@@ -36,7 +36,7 @@ Actions Client will take:
 ---------------------------------------
                 Input
 ---------------------------------------
-> Excel Spreadsheet (CSV) with Student Name, ID, Group, and Ticket #
+> Excel Spreadsheet (CSV) with Student Name, ID, Group, Ticket #, and # of tickets bought (List of Seniors)
 > Excel spreadsheet (CSV) with Student Groupings
     >> Submission via GUI
 
@@ -49,23 +49,36 @@ Actions Client will take:
     >> for Tables return Groups and Table ID
     >> for Groups return Student IDs, Students, and Table
 
+---------------------------------------
+                Functions
+---------------------------------------
+> Can manually remove things
+    >> Groups from Tables
+    >> Students from Groups
+
+> Can change Groups
+    >> Break into subgroups
+
+> Can manually move things around
+    >> Move Students, Groups, and Tables
+
 =======================================
             Notes/Guidelines
 =======================================
 
-> Tables can hold up to 10 people
+> Tables can hold up to ___ people
+    >> Table order doesn't matter
 
-> Groups can be from 1-10 people
+> Groups can be from 1-___ people
 
-> Talk to Yates about ticket IDs and QR codes
+> Ticket IDs will be sequential
 
 > Implement Database?
     >> Entails server costs and vulnerabilities
-    >> Can just write JSON file to Yate's computer
+    >> Can just write JSON file to Yates' computer
     >> Local database? may be too complicated to setup each time
 
-***> May need to make separate app to scan QR codes and make sure no dupes/fakes are made
-    >> Phone app/webcam?
+> May need to make smaller program to allow teachers to write to google sheets without messing things up with wrong ID
 
 > Make it easy on user (Yates), only has to upload 2 files with a clean UI and only has to run one file
     >> Quinten make Java Swing GUI
@@ -78,7 +91,6 @@ Actions Client will take:
 
 > Group in tables efficiently; need minimal tables used
     >> Try to fit as many people as possible per table
-    >> When in conflicts, first come first serve
 
 > Code to ensure longevity of code; needs to work for a long time after we're gone
 

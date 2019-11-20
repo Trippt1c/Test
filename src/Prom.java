@@ -22,6 +22,10 @@ public class Prom {
     {
         tables.add(t);
     }
+    public static void Create()
+    {
+        //main logic method
+    }
     /* works as "toString"
     prints like this
     Table 1

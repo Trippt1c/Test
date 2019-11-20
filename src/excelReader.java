@@ -35,6 +35,6 @@ public class excelReader {
     {
         // assumes order of spreadsheet is name, ID, Group#
         String[] student = in.nextLine().split(",");
-        return new Student(student[0],student[1],Integer.parseInt(student[2]));
+        return new Student(student[0],student[1],Integer.parseInt(student[2]),student[3]);
     }
 }

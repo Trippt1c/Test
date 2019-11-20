@@ -1,0 +1,32 @@
+General Git Rules
+
+****DON'T DO STUPID STUFF. DOUBLE CHECK EVERYTHING WITH YOURSELF AND DYLAN BEFORE DOING MERGES****
+
+----------------------------------
+Terminal Commands
+----------------------------------
+>git push
+:pushes current branch onto remote branch
+
+>git pull
+:updates current branch
+
+>git fetch
+:updates entire project (in terms of new branches)
+
+>git merge [branchName]
+:merges changes from branchName to current branch
+
+---------------------------------
+General Tips/Rules
+----------------------------------
+
+> Don't push to master without approval/someone checking the code; I have faith you won't screw it up
+
+> If not sure, ask for help from Dylan/look it up but don't try shady internet commands
+
+> Make branches when working on new components and re-merge them when done
+
+> Use VCS tab in Intellij to do Git stuff
+    >> VCS->Git
+

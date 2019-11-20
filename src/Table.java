@@ -29,6 +29,18 @@ public class Table {
     {
         seated.add(g);
     }
+    public int numSeated()
+    {
+        int num = 0;
+        for (Group x:seated) {
+            num+=x.size();
+        }
+        return num;
+    }
+    public boolean isFull()
+    {
+        return numSeated() >= 10;
+    }
 
     /*prints like this
     Group 1: Bob Dylan, Joe Davis, Gregg Scott

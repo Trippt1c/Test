@@ -11,13 +11,15 @@ public class Student {
     private String Name;
     private String ID;
     private int groupId;
+    private String ticketID;
 
     //students come from one CSV
-    public Student(String n, String i, int g)
+    public Student(String n, String i, int g,String t)
     {
       Name = n;
       ID = i;
       groupId = g;
+      ticketID = t;
     }
 
     public int getGroupId() {
@@ -30,6 +32,10 @@ public class Student {
 
     public String getName() {
         return Name;
+    }
+
+    public String getTicketID() {
+        return ticketID;
     }
 
     public void setGroupId(int groupId) {

@@ -13,6 +13,7 @@ public class Group {
     private int ID;
     private ArrayList<Student> students;
 
+    //stores groups of students from 1-10
     public Group() {
         ID = 0;
         students = new ArrayList<Student>();
@@ -37,5 +38,14 @@ public class Group {
 
     public int size() {
         return students.size();
+    }
+
+    @Override
+    public String toString() {
+        String grouped="";
+        for (Student x:students) {
+            grouped+=x.getName()+", ";
+        }
+        return grouped;
     }
 }

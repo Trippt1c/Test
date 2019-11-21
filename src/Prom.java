@@ -26,6 +26,7 @@ public class Prom {
     {
         //main logic method
     }
+
     /* works as "toString"
     prints like this
     Table 1

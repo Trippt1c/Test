@@ -18,10 +18,12 @@ Client:     Taylor Yates
 
 Due Date:   December 19, 2019
 
-Team:       Dylan Trang
-            Long Tran
-            David Quinten Sustaita-Robb
-            Minh Nguyen
+Team:       Dylan Trang - Sheets/Form integration, Client Communication
+            Long Tran - Frontend connections
+            David Quinten Sustaita-Robb - GUI
+            Minh Nguyen - Backend
+            Nick Bui - Backend
+            Noah Ruby - Sheets/Form Integration
 
 Language:   Java
 
@@ -30,20 +32,45 @@ Actions Client will take:
 2. Submit 2 Excel Spreadsheets in CSV form via the GUI submitter
 3. Be able to search for Student, Group, and Table info (details below)
 4. Record resulting Table data however they choose
-~~~~~~~~~~~~~~~ (Discussion needed)~~~~~~~~~~~~~~~~~~
-5. Scan QR codes on tickets to confirm entry into prom
 
 ---------------------------------------
                 Input
 ---------------------------------------
-> Excel Spreadsheet (CSV) with Student Name, ID, Group, Ticket #, and # of tickets bought (List of Seniors)
+> Excel Spreadsheet (CSV) with Students (List of Seniors)
 > Excel spreadsheet (CSV) with Student Groupings
     >> Submission via GUI
 
 ---------------------------------------
+            Sheet format
+---------------------------------------
+? = optional
+: = required
+'=' = autopopulate
+
+Sheet 1: Senior Info
+++++++++++++++++++++++++++
+ID|Last Name|First Name|Middle Name|# of tickets|Cash Amount|Check Amount|Check #|Ticket 1|Ticket 2|Initials|Table #|Group #|
+
+(Int)       ID: Student ID
+(String)    Last Name: Student Last Name
+(String)    First Name: Student First Name
+(String)    Middle Name: Student Middle Name
+(Int)       # 0f Tickets: Up to 2 tickets
+(Double)    Cash Amount? Stores cash paid.
+(Double)    Check Amount? Amount paid in check.
+(Int)       Ticket 1?= Ticket number for first ticket.
+(Int)       Ticket 2?= Ticket number for second ticket.
+(String)    Initials= Initials of registering teacher
+(Int)       Table #= ID of Table the Student is at
+(Int)       Group #= ID of Group the Student is in
+
+Sheet 2: Grouped up
+++++++++++++++++++++++++++
+
+---------------------------------------
                 Output
 ---------------------------------------
-> Tables of 10 with groups in them
+> Tables of ___ with groups in them
 > A GUI able to search for certain Tables, Students, and Groups and pull up information
     >> for Students search by ID and return Table, Group, Name, and Ticket ID
     >> for Tables return Groups and Table ID
@@ -70,6 +97,9 @@ Actions Client will take:
     >> Table order doesn't matter
 
 > Groups can be from 1-___ people
+
+> Create new Google Forms and Spreadsheets to use
+    > Custom code Form to allow to add more people
 
 > Ticket IDs will be sequential
 
@@ -160,3 +190,10 @@ excelReader
     >> Can be used to make Students
     >> Use to create Groups
 
+---------------------------------------
+            UI Classes
+---------------------------------------
+
+myFrame
+++++++++++++++++++
+> Acts as the basis for the GUI and frame

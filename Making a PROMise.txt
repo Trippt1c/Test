@@ -19,11 +19,14 @@ Client:     Taylor Yates
 Due Date:   December 19, 2019
 
 Team:       Dylan Trang - Sheets/Form integration, Client Communication
+            Noah Ruby - Sheets/Form Integration
+
             Long Tran - Frontend connections
             David Quinten Sustaita-Robb - GUI
+
             Minh Nguyen - Backend
             Nick Bui - Backend
-            Noah Ruby - Sheets/Form Integration
+
 
 Language:   Java
 
@@ -46,26 +49,45 @@ Actions Client will take:
 ? = optional
 : = required
 '=' = autopopulate
+! = hidden
 
 Sheet 1: Senior Info
 ++++++++++++++++++++++++++
+
+Fields:
 ID|Last Name|First Name|Middle Name|# of tickets|Cash Amount|Check Amount|Check #|Ticket 1|Ticket 2|Initials|Table #|Group #|
 
-(Int)       ID: Student ID
-(String)    Last Name: Student Last Name
-(String)    First Name: Student First Name
-(String)    Middle Name: Student Middle Name
-(Int)       # 0f Tickets: Up to 2 tickets
-(Double)    Cash Amount? Stores cash paid.
-(Double)    Check Amount? Amount paid in check.
-(Int)       Ticket 1?= Ticket number for first ticket.
-(Int)       Ticket 2?= Ticket number for second ticket.
-(String)    Initials= Initials of registering teacher
-(Int)       Table #= ID of Table the Student is at
-(Int)       Group #= ID of Group the Student is in
+Field Desc:
+(Int)       ID           :      Student ID
+(String)    Last Name    :      Student Last Name
+(String)    First Name   :      Student First Name
+(String)    Middle Name  :      Student Middle Name
+(Int)       # 0f Tickets :      Up to 2 tickets
+(Double)    Cash Amount  ?      Stores cash paid.
+(Double)    Check Amount ?      Amount paid in check.
+(Int)       Ticket 1     ?=     Ticket number for first ticket.
+(Int)       Ticket 2     ?=     Ticket number for second ticket.
+(String)    Initials     =      Initials of registering teacher
+(Int)       Table #      !=     ID of Table the Student is at
+(Int)       Group #      !=     ID of Group the Student is in
 
 Sheet 2: Grouped up
 ++++++++++++++++++++++++++
+> Form can be Jagged; diff # of people per Group
+> Figure out how to make only __ tickets per Group
+
+Fields:
+|Group size|
+
+(Int)       Group size   :      Size of the group. Auto-create Student Fields to match.
+
+Student Fields:
+|ID|Last Name|First Name|# of Tickets|
+
+(Int)       ID           :      Student ID
+(String)    Last Name    :      Student Last Name
+(String)    First Name   :      Student First Name
+(Int)       # 0f Tickets :      Up to 2 tickets
 
 ---------------------------------------
                 Output
@@ -99,7 +121,12 @@ Sheet 2: Grouped up
 > Groups can be from 1-___ people
 
 > Create new Google Forms and Spreadsheets to use
-    > Custom code Form to allow to add more people
+    >> Custom code Form to allow to add more people
+    >> Create custom sheet
+    >> Create custom account for API usage
+        >>> Email:
+        >>> Password:
+
 
 > Ticket IDs will be sequential
 
@@ -109,6 +136,7 @@ Sheet 2: Grouped up
     >> Local database? may be too complicated to setup each time
 
 > May need to make smaller program to allow teachers to write to google sheets without messing things up with wrong ID
+    >> Incorporate sheets into UI
 
 > Make it easy on user (Yates), only has to upload 2 files with a clean UI and only has to run one file
     >> Quinten make Java Swing GUI

@@ -9,12 +9,14 @@ public class Table {
 
     private int ID;
     private ArrayList<Group> seated;
+    private int maxSize;
 
     //stores groups of students. singles will be added to their own group
-    public Table(int i)
+    public Table(int i,int s)
     {
         ID = i;
         seated = new ArrayList<Group>();
+        maxSize = s;
     }
 
     public ArrayList<Group> getSeated() {
@@ -39,7 +41,7 @@ public class Table {
     }
     public boolean isFull()
     {
-        return numSeated() >= 10;
+        return numSeated() >= maxSize;
     }
 
     /*prints like this

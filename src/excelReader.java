@@ -37,12 +37,14 @@ public class excelReader {
     {
         // assumes order of spreadsheet is name, ID, Group#
         String[] student = in.nextLine().split(",");
-        return new Student(student[0],student[1],Integer.parseInt(student[2]),student[3]);
+        //return new Student(student[0],student[1],Integer.parseInt(student[2]),student[3]);
+        return null;
     }
 
+    // creates and returns groups of students based on the sheet
     public ArrayList<Group> getGroups()
     {
-
+        //NEEDS A REDO
         HashMap<Integer,Group> grouped = new HashMap<>();
 
         while(in.hasNext())

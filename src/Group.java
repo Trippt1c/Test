@@ -19,6 +19,7 @@ public class Group {
         students = new ArrayList<Student>();
     }
 
+    // Create Groups of ID
     public Group(int i) {
         ID = i;
         students = new ArrayList<Student>();

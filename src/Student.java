@@ -26,7 +26,7 @@ public class Student {
     private int tableId;
 
     //create full student
-    public Student(String n, String id, int grId, String tickId1, String tickId2, int numT, int tabId)
+    public Student(String id, String n, int grId, String tickId1, String tickId2, int numT, int tabId)
     {
       Name = n;
       ID = id;
@@ -39,7 +39,7 @@ public class Student {
     }
 
     //create default student
-    public Student(String n, String id, int numT)
+    public Student( String id, String n, int numT)
     {
         Name = n;
         ID = id;

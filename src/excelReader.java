@@ -1,7 +1,5 @@
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -37,35 +35,9 @@ public class excelReader {
     {
         // assumes order of spreadsheet is name, ID, Group#
         String[] student = in.nextLine().split(",");
-        //return new Student(student[0],student[1],Integer.parseInt(student[2]),student[3]);
-        return null;
+        return new Student(student[1],student[2]+student[3]+student[4],Integer.parseInt(student[5]));
     }
 
     // creates and returns groups of students based on the sheet
-    public ArrayList<Group> getGroups()
-    {
-        //NEEDS A REDO
-        HashMap<Integer,Group> grouped = new HashMap<>();
 
-        while(in.hasNext())
-        {
-            Student temp = nextStudent();
-
-            if(!grouped.containsKey(temp.getGroupId()))
-            {
-
-                grouped.put(temp.getGroupId(),new Group(temp.getGroupId()));
-                grouped.get(temp.getGroupId()).addStudent(temp);
-
-            }
-            else
-            {
-
-                grouped.get(temp.getGroupId()).addStudent(temp);
-
-            }
-        }
-
-        return (ArrayList<Group>) grouped.values();
-    }
 }

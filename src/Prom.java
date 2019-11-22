@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.stream.IntStream;
 
 /**
@@ -13,6 +14,7 @@ public class Prom {
     private static int maxSize;
     //main class that runs everything
     public static void main(String[] args) throws IOException {
+        tables = new ArrayList<Table>();
         setup(10);
         printTables();
     }
@@ -46,6 +48,33 @@ public class Prom {
         IntStream.rangeClosed(0,i).forEach(x -> tables.add(new Table(x,maxSize)));
     }
 
+    public ArrayList<Group> getGroups() throws IOException
+    {
+        //NEEDS A REDO
+        HashMap<Integer,Group> grouped = new HashMap<>();
+        excelReader in = new excelReader("tempfile");
+
+        while(in.getIn().hasNext())
+        {
+            Student temp = in.nextStudent();
+
+            if(!grouped.containsKey(temp.getGroupId()))
+            {
+
+                grouped.put(temp.getGroupId(),new Group(temp.getGroupId()));
+                grouped.get(temp.getGroupId()).addStudent(temp);
+
+            }
+            else
+            {
+
+                grouped.get(temp.getGroupId()).addStudent(temp);
+
+            }
+        }
+
+        return (ArrayList<Group>) grouped.values();
+    }
     /* works as "toString"
     prints like this
     Table 1

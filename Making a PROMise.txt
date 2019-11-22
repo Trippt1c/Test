@@ -127,7 +127,6 @@ Student Fields:
         >>> Email:
         >>> Password:
 
-
 > Ticket IDs will be sequential
 
 > Implement Database?
@@ -153,7 +152,7 @@ Student Fields:
 > Code to ensure longevity of code; needs to work for a long time after we're gone
 
 > Consider Recursion/DP for algorithm
-    >>Like a inverted CoinChange Problem
+    >> Repeated Knapsack
 
 > Security Measures
     >> Encryption?
@@ -164,7 +163,7 @@ Student Fields:
     >> Make changes according to client requests asap
     >> Client may suggest difficult tasks; Attempt first or reason them out of it
     >> Make the best product possible
-    >> Meet->Plan->Design->Develop->Test->Evaluate->Repeat
+    >> Meet-> Plan-> Design-> Develop-> Test-> Evaluate-> Repeat
 
 =======================================
            Project Structure
